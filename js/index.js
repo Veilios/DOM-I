@@ -39,4 +39,62 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let circleLogo = document.getElementById('cta-img');
+circleLogo.setAttribute('src', siteContent['cta']['img-src']);
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let mainText = document.querySelector('.cta-text h1');
+mainText.innerHTML = siteContent['cta']['h1'];
+
+let copyright = document.querySelector('footer p');
+copyright.innerHTML = siteContent['footer']['copyright'];
+
+let mainButton = document.querySelector('.cta-text button');
+mainButton.innerHTML = siteContent['cta']['button'];
+
+let navBar = document.querySelectorAll('a');
+navBar[0].innerHTML = siteContent['nav']['nav-item-1'];
+navBar[1].innerHTML = siteContent['nav']['nav-item-2'];
+navBar[2].innerHTML = siteContent['nav']['nav-item-3'];
+navBar[3].innerHTML = siteContent['nav']['nav-item-4'];
+navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
+navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
+navBar.forEach((element) => {
+  element.style.color = 'green';
+});
+
+let extra = document.createElement('a');
+extra.innerHTML = 'Extra';
+extra.style.color = 'green';
+document.querySelector('.container header nav').appendChild(extra);
+
+let news = document.createElement('a');
+news.innerHTML = 'News';
+news.style.color = 'green';
+document.querySelector('.container header nav').appendChild(news);
+
+let contactInfoTitle = document.querySelector('.contact h4');
+contactInfoTitle.innerHTML = siteContent['contact']['contact-h4'];
+
+let contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].innerHTML = siteContent['contact']['address'];
+contactInfo[1].innerHTML = siteContent['contact']['phone'];
+contactInfo[2].innerHTML = siteContent['contact']['email'];
+
+let mainContentTitle = document.querySelectorAll('.text-content h4')
+mainContentTitle[0].innerHTML = siteContent['main-content']['features-h4'];
+mainContentTitle[1].innerHTML = siteContent['main-content']['about-h4'];
+mainContentTitle[2].innerHTML = siteContent['main-content']['services-h4'];
+mainContentTitle[3].innerHTML = siteContent['main-content']['product-h4'];
+mainContentTitle[4].innerHTML = siteContent['main-content']['vision-h4'];
+
+let mainContent = document.querySelectorAll('.text-content p');
+mainContent[0].innerHTML = siteContent['main-content']['features-content'];
+mainContent[1].innerHTML = siteContent['main-content']['about-content'];
+mainContent[2].innerHTML = siteContent['main-content']['services-content'];
+mainContent[3].innerHTML = siteContent['main-content']['product-content'];
+mainContent[4].innerHTML = siteContent['main-content']['vision-content'];
